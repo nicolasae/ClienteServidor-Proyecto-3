@@ -1,5 +1,5 @@
-from .CRUDDoctores import *
-from .dbPostgres import *
+from CRUDDoctores import Doctores
+from dbPostgres import DBPostgresql
 
 SCHEMA = {
     '_id': {

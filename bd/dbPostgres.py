@@ -1,19 +1,16 @@
 import psycopg2
 import re
-from environs import Env
 
 class DBPostgresql:
 
     def __init__(self, schema, table_name):
         self._table_name = table_name
         self._schema = schema
-        env = Env()
-        env.read_env()
         self._connect = psycopg2.connect(
             host='127.0.0.1:5432', 
             database='clienteServidor', 
             user='postgres', 
-            password=''
+            password='///'
         )
 
         self._cur = self._connect.cursor()
