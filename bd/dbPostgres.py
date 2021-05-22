@@ -10,10 +10,10 @@ class DBPostgresql:
         env = Env()
         env.read_env()
         self._connect = psycopg2.connect(
-            host=env('POSTGRES_HOST'), 
-            database=env('POSTGRES_DB'), 
-            user=env('POSTGRES_USER'), 
-            password=env('POSTGRES_PASSWORD')
+            host='127.0.0.1:5432', 
+            database='clienteServidor', 
+            user='postgres', 
+            password=''
         )
 
         self._cur = self._connect.cursor()
