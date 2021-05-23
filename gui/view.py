@@ -1,4 +1,4 @@
-from ventana import *
+from .ventana import *
 
 class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
     def __init__(self, *args, **kwargs):
@@ -6,9 +6,11 @@ class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
         self.setupUi(self)
 
     
-
-if __name__ == "__main__":
+def show():
     app = QtWidgets.QApplication([])
     window = MainWindow()
     window.show()
     app.exec_()
+
+if __name__ == "__main__":
+    show()
